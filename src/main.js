@@ -1,9 +1,6 @@
 import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
 import { Entry } from './journal';
 import './styles.css';
-// import 'bootstrap';
 
 var entries = [];
 

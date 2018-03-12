@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Journal</title>
   </head>
   <body>
-    <h1>Your journal</h1><hr>
-    <form id="journal-form">
-      <label for="date">Date of entry:</label>
-      <input id="date" type="date"><br>
-      <label for="subject">Subject:</label>
-      <input id="subject" type="text"><br>
-      <textarea rows="15" cols="100" id="content" placeholder="Entry"></textarea><br>
-      <button type="submit">Submit</button>
-    </form>
-    <h3>Past entries:</h3>
-    <ul id="entryList"></ul>
+    <div class="container">
 
-    <div class="show-entry">
-      <h3></h3>
-      <p>Subject: <span class="subject"></span></p>
-      <p>Content: <span class="content"></span></p>
-      <p>Word count: <span class="words"></span></p>
-      <p>Vowel count: <span class="vowels"></span></p>
-      <p>Consonant count: <span class="consonants"></span></p>
+      <h1>Secrets Don't Make Friends</h1><hr>
+      <form id="journal-form" class="form-group">
+        <label for="date">Date of Incident:</label>
+        <input id="date" type="date" class="form-control"><br>
+        <label for="subject">Subject:</label>
+        <input id="subject" type="text" class="form-control"><br>
+        <textarea rows="15" cols="100" id="content" placeholder="Tell All" class="form-control"></textarea><br>
+        <button type="submit" class="btn btn-pink">Submit</button>
+      </form>
+      <h3>Past entries:</h3>
+      <ul id="entryList"></ul>
+
+      <div class="show-entry">
+        <h3></h3>
+        <p>Subject: <span class="subject"></span></p>
+        <p>Content: <span class="content"></span></p>
+        <p>Word count: <span class="words"></span></p>
+        <p>Vowel count: <span class="vowels"></span></p>
+        <p>Consonant count: <span class="consonants"></span></p>
+      </div>
     </div>
+    <iframe src="https://giphy.com/embed/12wPCPiNlbozss" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
   </body>
 </html>
