@@ -5,14 +5,16 @@
     <title>Journal</title>
   </head>
   <body>
+    <h1>Your journal</h1><hr>
     <form id="journal-form">
       <label for="date">Date of entry:</label>
-      <input id="date" type="date">
+      <input id="date" type="date"><br>
       <label for="subject">Subject:</label>
-      <input id="subject" type="text">
-      <textarea rows="10" cols="6" id="content" placeholder="Entry"></textarea>
+      <input id="subject" type="text"><br>
+      <textarea rows="15" cols="100" id="content" placeholder="Entry"></textarea><br>
       <button type="submit">Submit</button>
     </form>
+    <h3>Past entries:</h3>
     <ul id="entryList"></ul>
 
     <div class="show-entry">

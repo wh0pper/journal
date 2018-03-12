@@ -3,6 +3,7 @@ window.jQuery = $;
 window.$ = $;
 import { Entry } from './journal';
 import './styles.css';
+// import 'bootstrap';
 
 var entries = [];
 
@@ -15,7 +16,7 @@ $(document).ready(function() {
     var entry = new Entry(date, content, subject);
     entries.push(entry);
 
-      $('#entryList').append("<li><span class='entry'>" + entry.date + "</span></li>");
+      $('#entryList').append("<li><span class='entry'>" + entry.getTeaser() + "..." + "</span></li>");
 
 
     $(".entry").last().click(function() {
@@ -23,9 +24,9 @@ $(document).ready(function() {
       $(".show-entry h3").text(entry.date);
       $(".subject").text(entry.subject);
       $(".content").text(entry.content);
-      $(".words").text(entry.wordCount());
-      $(".vowels").text(entry.vowelCount());
-      $(".consonants").text(entry.consonantCount());
+      $(".words").text(entry.words);
+      $(".vowels").text(entry.vowels);
+      $(".consonants").text(entry.consonants);
     });
 
   });
