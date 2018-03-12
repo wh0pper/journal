@@ -23,6 +23,7 @@ $(document).ready(function() {
       $(".show-entry h3").text(entry.date);
       $(".subject").text(entry.subject);
       $(".content").text(entry.content);
+      $(".words").text(entry.wordCount());
     });
 
   });

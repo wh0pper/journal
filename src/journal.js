@@ -6,5 +6,6 @@ export function Entry(date, content, subject) {
 }
 
 Entry.prototype.wordCount = function () {
+  console.log(this.content);
   return this.content.split(' ').length;
 };
