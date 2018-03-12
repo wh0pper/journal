@@ -1,13 +1,30 @@
-import { pingPong } from './ping-pong';
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+import { Entry } from './journal';
 import './styles.css';
 
+var entries = [];
+
 $(document).ready(function() {
-  $('#ping-pong-form').submit(function(event) {
+  $('#journal-form').submit(function(event) {
     event.preventDefault();
-    var goal = $('#goal').val();
-    var output = pingPong(goal);
-    output.forEach(function(element) {
-      $('#solution').append("<li>" + element + "</li>");
+    var date = $('input#date').val();
+    var subject = $('input#subject').val();
+    var content = $('textarea#content').val();
+    var entry = new Entry(date, content, subject);
+    entries.push(entry);
+
+      $('#entryList').append("<li><span class='entry'>" + entry.date + "</span></li>");
+
+
+    $(".entry").last().click(function() {
+      $(".show-entry").show();
+      $(".show-entry h3").text(entry.date);
+      $(".subject").text(entry.subject);
+      $(".content").text(entry.content);
     });
+
   });
+
 });
