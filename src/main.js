@@ -24,6 +24,8 @@ $(document).ready(function() {
       $(".subject").text(entry.subject);
       $(".content").text(entry.content);
       $(".words").text(entry.wordCount());
+      $(".vowels").text(entry.vowelCount());
+      $(".consonants").text(entry.consonantCount());
     });
 
   });
